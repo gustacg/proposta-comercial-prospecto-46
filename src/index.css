@@ -1,0 +1,240 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Custom Design System based on provided style guide */
+
+@layer base {
+  :root {
+    /* Primary Colors */
+    --primary-blue: #1946e9;
+    --secondary-blue: #2953eb;
+    
+    /* Neutral Colors */
+    --heading-black: #0F1215;
+    --text-gray: #615E83;
+    --color-600: #807E9A;
+    --color-500: #E5E5EF;
+    --color-400: #F2F1FF;
+    --color-300: #F7F7FB;
+    --color-200: #F8F8FF;
+    --white: #FFFFFF;
+    
+    /* System Colors */
+    --blue: #1946e9;
+    --blue-light: #4D6CED;
+    --blue-lighter: #7A8CF0;
+    --blue-lightest: #E8EDFE;
+    
+    --green: #3EFF3A;
+    --green-light: #9FFF9D;
+    --green-lighter: #CEFFCD;
+    --green-lightest: #ECFFEC;
+    
+    --yellow: #FFEB3A;
+    --yellow-light: #FFF69D;
+    --yellow-lighter: #FFFACD;
+    --yellow-lightest: #FFFDEC;
+    
+    --red: #FF3A46;
+    --red-light: #FF9DA3;
+    --red-lighter: #FFCDD0;
+    --red-lightest: #FFECEC;
+
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.75rem;
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    color: #615E83;
+  }
+
+  /* Typography Scale */
+  .display-1 { font-size: 78px; line-height: 84px; }
+  .display-2 { font-size: 62px; line-height: 76px; }
+  .display-3 { font-size: 44px; line-height: 52px; }
+  .display-4 { font-size: 28px; line-height: 40px; }
+
+  h1 { font-size: 42px; line-height: 54px; color: #0F1215; }
+  h2 { font-size: 32px; line-height: 48px; color: #0F1215; }
+  h3 { font-size: 24px; line-height: 34px; color: #0F1215; }
+  h4 { font-size: 22px; line-height: 28px; color: #0F1215; }
+  h5 { font-size: 18px; line-height: 24px; color: #0F1215; }
+  h6 { font-size: 16px; line-height: 22px; color: #0F1215; }
+
+  .body-large { font-size: 18px; line-height: 32px; }
+  .body-default { font-size: 14px; line-height: 26px; }
+  .body-small { font-size: 12px; line-height: 22px; }
+
+  /* Custom animations */
+  @keyframes fade-in {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  @keyframes float {
+    0%, 100% { transform: translateY(0px) rotateY(0deg) rotateX(0deg); }
+    25% { transform: translateY(-20px) rotateY(90deg) rotateX(10deg); }
+    50% { transform: translateY(-35px) rotateY(180deg) rotateX(0deg); }
+    75% { transform: translateY(-20px) rotateY(270deg) rotateX(-10deg); }
+  }
+
+  @keyframes glow {
+    0%, 100% { box-shadow: 0 0 20px rgba(59, 130, 246, 0.3); }
+    50% { box-shadow: 0 0 40px rgba(59, 130, 246, 0.6); }
+  }
+
+  @keyframes glow-shadow {
+    0%, 100% { 
+      box-shadow: 0 4px 15px rgba(251, 146, 60, 0.4);
+    }
+    50% { 
+      box-shadow: 0 8px 25px rgba(251, 146, 60, 0.7), 0 0 30px rgba(251, 146, 60, 0.3);
+    }
+  }
+
+  @keyframes gentle-bounce {
+    0%, 100% { 
+      transform: translateY(0px);
+    }
+    50% { 
+      transform: translateY(-8px);
+    }
+  }
+
+  @keyframes shine {
+    0% {
+      background-position: -200% center;
+    }
+    100% {
+      background-position: 200% center;
+    }
+  }
+
+  .animate-fade-in {
+    animation: fade-in 0.8s ease-out;
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-glow {
+    animation: glow 2s ease-in-out infinite;
+  }
+
+  .animate-shine {
+    background: linear-gradient(90deg, transparent 30%, rgba(255, 255, 255, 0.8) 50%, transparent 70%);
+    background-size: 200% 100%;
+    animation: shine 2s infinite;
+  }
+}
+
+/* Custom color utilities */
+@layer utilities {
+  .bg-primary-blue { background-color: #1946e9; }
+  .bg-secondary-blue { background-color: #2953eb; }
+  .bg-heading-black { background-color: #0F1215; }
+  .bg-text-gray { background-color: #615E83; }
+  .bg-color-600 { background-color: #807E9A; }
+  .bg-color-500 { background-color: #E5E5EF; }
+  .bg-color-400 { background-color: #F2F1FF; }
+  .bg-color-300 { background-color: #F7F7FB; }
+  .bg-color-200 { background-color: #F8F8FF; }
+  
+  .text-primary-blue { color: #1946e9; }
+  .text-secondary-blue { color: #2953eb; }
+  .text-heading-black { color: #0F1215; }
+  .text-text-gray { color: #615E83; }
+  .text-color-600 { color: #807E9A; }
+
+  .border-primary-blue { border-color: #1946e9; }
+  .border-color-500 { border-color: #E5E5EF; }
+
+  .shadow-3xl {
+    box-shadow: 0 35px 60px-12px rgba(0, 0, 0, 0.25);
+  }
+
+  .glass {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+  }
+}
